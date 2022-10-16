@@ -27,13 +27,13 @@
                     <td>{{p.name}}</td>
                     <td>{{p.price}}</td>
                     <td><i *ngIf="p.promotion==true" class="bi bi-heart-fill text-success"></i></td>
-                    <td>
+                    <td *ngIf="authService.hasRoles('ADMIN')">
                         <button (click)="handleSetPromo(p)" [ngClass]="p.promotion==true ? 'btn btn-danger':'btn btn-success' ">
                         <span *ngIf="p.promotion==true">Promo OFF</span>
                         <span *ngIf="p.promotion==false">Promo ON</span>
                     </button>
                     </td>
-                    <td>
+                    <td *ngIf="authService.hasRoles('ADMIN')">
                         <button (click)="delete(p)" class="btn btn-danger">
                             <i class="bi bi-trash"></i>
                         </button>

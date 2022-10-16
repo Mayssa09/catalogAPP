@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Product } from '../model/product.model';
+import { AuthentificationService } from '../services/authentification.service';
 import { ProductService } from '../services/product.service';
 
 @Component({
@@ -20,7 +21,7 @@ export class ProductsComponent implements OnInit {
 
 searchFormGroup! : FormGroup 
 
-  constructor(private productService : ProductService, private fb : FormBuilder) { }
+  constructor(private productService : ProductService, private fb : FormBuilder, public authService : AuthentificationService) { }
 
   ngOnInit(): void {
    this.searchFormGroup = this.fb.group(

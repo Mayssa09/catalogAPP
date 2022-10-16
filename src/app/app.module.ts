@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
 import { CustumersComponent } from './custumers/custumers.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { AdminTemplateComponent } from './admin-template/admin-template.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
-    CustumersComponent
+    CustumersComponent,
+    LoginComponent,
+    AdminTemplateComponent
   ],
   imports: [
     BrowserModule,
